@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { Main } from './UI/Main';
 import { NavBar } from './UI/NavBar';
 import { store } from './state/store';
+import reportWebVitals from './reportWebVitals';
 
 const darkTheme = createTheme({
   palette: {
@@ -22,3 +23,5 @@ export const App = () => {
     </Provider>
   );
 };
+
+reportWebVitals();
