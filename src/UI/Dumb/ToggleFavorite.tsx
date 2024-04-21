@@ -3,14 +3,14 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { IconButton } from '@mui/material';
 
 interface Props {
-  favorite: boolean;
-  onfavorite: () => void;
+  onFavorite: (e: any) => void
+  isFavorite: boolean;
 }
 
-export const ToggleFavorite: React.FC<Props> = ({ favorite, onfavorite }) => {
+export const AppToggleFavorite: React.FC<Props> = ({onFavorite, isFavorite }) => {
   return (
-    <IconButton onClick={onfavorite}>
-      {favorite ? <FavoriteBorderIcon /> : <FavoriteIcon />}
+    <IconButton onClick={(e) => onFavorite(e)}>
+      {isFavorite ? <FavoriteBorderIcon /> : <FavoriteIcon />}
     </IconButton>
   );
 };

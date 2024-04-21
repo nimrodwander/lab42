@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { BreweriesReducer } from './BreweriesSlice';
-import { FavoritesReducer } from './FavoritesSlice';
+import { BreweriesReducer } from './Breweries/BreweriesSlice';
+import { FavoritesReducer } from './Favorites/FavoritesSlice';
 
 const rootReducer = combineReducers({ BreweriesReducer, FavoritesReducer });
 

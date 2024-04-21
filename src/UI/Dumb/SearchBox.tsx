@@ -1,14 +1,14 @@
-import { Box, Button, FormControl, IconButton, InputAdornment, TextField } from "@mui/material";
-import React from "react";
 import SearchIcon from '@mui/icons-material/Search';
+import { Box, IconButton, InputAdornment, TextField } from '@mui/material';
+import React from 'react';
 
-interface Props{
-  onSearch: (e: any) => void,
-  onChange: (e: any) => void,
-  value: string
+interface Props {
+  onSearch: (e: any) => void;
+  onChange: (e: any) => void;
+  value: string;
 }
 
-export const SearchBox: React.FC<Props> = ({ onSearch, onChange, value }) => {
+export const AppSearch: React.FC<Props> = ({ onSearch, onChange, value }) => {
   return (
     <Box padding={15}>
       <TextField

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { getBreweries } from '../../state/Breweries/BreweriesSlice';
 import { useDispatchApp } from '../../state/hooks';
-import { SearchBox } from '../Dumb/SearchBox';
-import { getBreweries } from '../../state/BreweriesSlice';
+import { AppSearch } from '../Dumb/SearchBox';
 
 export const SearchBrewery: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,7 +20,7 @@ export const SearchBrewery: React.FC = () => {
   };
 
   return (
-    <SearchBox
+    <AppSearch
       onChange={(e) => onChangeHandler(e)}
       onSearch={(e) => onSearchHanlder(e)}
       value={searchTerm}

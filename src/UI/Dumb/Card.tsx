@@ -4,19 +4,17 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { AppBreweryItem } from '../../util/types';
-import { ToggleFavorite } from './ToggleFavorite';
+import { AppToggleFavorite } from './ToggleFavorite';
 
 interface Props {
   data: AppBreweryItem;
-  favorite: boolean;
-  onfavorite: () => void;
+  onFavorite: (e: any) => void;
   onClick: () => void;
 }
 
 export const AppCard: React.FC<Props> = ({
   data,
-  favorite,
-  onfavorite,
+  onFavorite,
   onClick,
 }) => {
   return (
@@ -33,7 +31,7 @@ export const AppCard: React.FC<Props> = ({
             <Typography gutterBottom variant="h5" component="div">
               {data.name}
             </Typography>
-            <ToggleFavorite onfavorite={onfavorite} favorite={favorite} />
+            <AppToggleFavorite isFavorite={data.isFavorite} onFavorite={onFavorite} />
           </Box>
           <Typography variant="body2" color="text.secondary">
             {data.address_1}

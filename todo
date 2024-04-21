@@ -5,6 +5,10 @@
 14. orgenize paths tree
 15. remove all comments that might be related to outsources
 16. types and replace all any
+17. remove all ids and labels of built in mui components
+18. messy callbacks make sure consistency
+19. find an elegant solution for the is loading
+19. error handling
 
 architecture todo
 

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { ApiBreweryItem, AppBreweriesList } from '../util/types';
-import { RootState } from './store';
-import { API_BASE_URL, ITEMS_PER_PAGE } from '../util/config.env';
+import { API_BASE_URL, ITEMS_PER_PAGE } from '../../util/config.env';
+import { ApiBreweryItem, AppBreweriesList } from '../../util/types';
+import { RootState } from '../store';
 
 export interface initialStateInterface {
   breweries: any;
@@ -33,7 +33,7 @@ export const getBreweries = createAsyncThunk<
 });
 
 export const BreweriesSlice = createSlice({
-  name: 'bereweries',
+  name: 'breweries',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
