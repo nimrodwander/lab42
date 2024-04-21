@@ -1,0 +1,16 @@
+1. renaming components, functions, file names
+4. install image generator for the cards
+8. react router
+9. seperate styles object from tsx files
+14. orgenize paths tree
+15. remove all comments that might be related to outsources
+16. types and replace all any
+
+architecture todo
+
+1. modal extract into dumb and smart component
+2. grid extract into dumb component and smart component
+3. context instead of use state
+4. base url by config
+5. routing
+6. clicking on enter send request

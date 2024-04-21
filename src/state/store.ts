@@ -1,8 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { fileSystemReducer } from './fileSystem/reducer';
-import { modesReducer } from './modes/reducer';
+import { BreweriesReducer } from './BreweriesSlice';
+import { FavoritesReducer } from './FavoritesSlice';
 
-const rootReducer = combineReducers({ fileSystemReducer, modesReducer });
+const rootReducer = combineReducers({ BreweriesReducer, FavoritesReducer });
 
 export const store = configureStore({
   reducer: rootReducer,
