@@ -8,6 +8,6 @@ export const APPLICATION_BASE_URL =
   process.env.REACT_APP_APPLICATION_BASE_URL ||
   errorHandler('REACT_APP_APPLICATION_BASE_URL is not defined');
 
-export const ITEMS_PER_PAGE =
-  process.env.REACT_APP_ITEMS_PER_PAGE ||
-  errorHandler('REACT_APP_ITEMS_PER_PAGE is not defined');
+export const IMAGE_URL =
+  'https://yolongbrewtech.com/wp-content/uploads/2018/06/24HL-micro-brewery.jpg';
+export const ITEMS_PER_PAGE = 12;

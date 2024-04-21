@@ -23,7 +23,7 @@ export const App = () => {
         <AppNavbar />
         <Routes>
           <Route
-            path="browse-breweries/:pageID"
+            path="browse-breweries/*"
             element={<BrowseBreweries />}
           />
           <Route path="favorite-breweries" element={<FavoriteBreweries />}>
@@ -31,7 +31,7 @@ export const App = () => {
           </Route>
           <Route
             path="*"
-            element={<Navigate to="/browse-breweries/1" replace />}
+            element={<Navigate to="/browse-breweries" replace />}
           />
         </Routes>
       </Provider>

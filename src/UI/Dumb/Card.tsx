@@ -18,7 +18,7 @@ export const AppCard: React.FC<Props> = ({
   onClick,
 }) => {
   return (
-    <Card onClick={onClick}>
+    <Card onClick={onClick} key={data.id}>
       <CardActionArea>
         <CardMedia
           component="img"
