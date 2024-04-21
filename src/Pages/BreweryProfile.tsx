@@ -1,15 +1,13 @@
 import { useNavigate } from 'react-router-dom';
-import { BrewriesSelector } from '../state/Favorites/FavoritesSelectors';
 import { useSelectorApp } from '../state/hooks';
 import { Box, List, Typography } from '@mui/material';
-import { IMAGE_URL } from '../util/constants';
 import { AppModal } from '../UI/Dumb/Modal';
 import { RootState } from '../state/store';
+import { IMAGE_URL } from '../util/config';
+import { BrewriesSelector } from '../state/Breweries/BreweriesSelectors';
 
 export const BreweryProfile: React.FC<any> = () => {
-  const navigate = useNavigate();
   
-  const selectIsLoading = useSelectorApp((state: RootState) => state.BreweriesReducer.breweries);
   const selectBrewery = useSelectorApp((state: RootState) =>
     BrewriesSelector.selectBreweryByID(
       state,

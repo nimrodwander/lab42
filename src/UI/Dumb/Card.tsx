@@ -8,12 +8,14 @@ import { AppToggleFavorite } from './ToggleFavorite';
 
 interface Props {
   data: AppBreweryItem;
+  imageUrl: string;
   onFavorite: (e: any) => void;
   onClick: () => void;
 }
 
 export const AppCard: React.FC<Props> = ({
   data,
+  imageUrl,
   onFavorite,
   onClick,
 }) => {
@@ -23,7 +25,7 @@ export const AppCard: React.FC<Props> = ({
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={imageUrl}
           alt="green iguana"
         />
         <CardContent>
@@ -31,7 +33,10 @@ export const AppCard: React.FC<Props> = ({
             <Typography gutterBottom variant="h5" component="div">
               {data.name}
             </Typography>
-            <AppToggleFavorite isFavorite={data.isFavorite} onFavorite={onFavorite} />
+            <AppToggleFavorite
+              isFavorite={data.isFavorite}
+              onFavorite={onFavorite}
+            />
           </Box>
           <Typography variant="body2" color="text.secondary">
             {data.address_1}

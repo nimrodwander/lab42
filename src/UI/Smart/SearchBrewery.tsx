@@ -11,8 +11,8 @@ export const SearchBrewery: React.FC = () => {
   const { pageID } = useParams();
 
   const onSearchHanlder = (e: any) => {
-    if (!e.target.value) {
-      alert('search input is empty');
+    if (!searchTerm) {
+      alert('Search input is empty');
       return;
     }
     dispatch(

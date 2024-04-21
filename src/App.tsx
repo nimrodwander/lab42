@@ -26,9 +26,7 @@ export const App = () => {
             path="browse-breweries/*"
             element={<BrowseBreweries />}
           />
-          <Route path="favorite-breweries" element={<FavoriteBreweries />}>
-            <Route path=":breweryID" element={<BreweryProfile />} />
-          </Route>
+          <Route path="favorite-breweries" element={<FavoriteBreweries />}/>
           <Route
             path="*"
             element={<Navigate to="/browse-breweries" replace />}

@@ -5,6 +5,7 @@ import { useDispatchApp, useSelectorApp } from '../../state/hooks';
 import { RootState } from '../../state/store';
 import { AppBreweryItem } from '../../util/types';
 import { AppCard } from '../Dumb/Card';
+import { IMAGE_URL } from '../../util/config';
 
 interface Props {
     selector: (state: RootState, id: string) => AppBreweryItem;
@@ -24,6 +25,7 @@ export const BreweryCard: React.FC<Props> = ({ selector, id }) => {
     };
   return (
     <AppCard
+          imageUrl={IMAGE_URL}
       onClick={onClickHandler}
       onFavorite={(e) => onfavoriteHandler(e)}
       data={selectBrewery}

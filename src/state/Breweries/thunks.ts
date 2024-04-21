@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { API_BASE_URL } from '../../util/config';
+import { API_BASE_URL, ITEMS_PER_PAGE } from '../../util/config';
 import { ApiBreweryItem, AppBreweriesList } from '../../util/types';
 import { RootState } from '../store';
 
