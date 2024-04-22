@@ -24,4 +24,4 @@ export const FavoriteBreweries: React.FC = () => {
       </Grid>
     </Box>
   );
-};
+}

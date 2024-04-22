@@ -6,7 +6,7 @@ import { RootState } from '../../state/store';
 import { AppBreweryItem } from '../../util/types';
 import { AppCard } from '../Dumb/Card';
 import { IMAGE_URL } from '../../util/config';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { BreweryProfile } from '../../Pages/BreweryProfile/BreweryProfile';
 
 interface Props {
@@ -19,10 +19,11 @@ export const BreweryCard: React.FC<Props> = ({ selector, id }) => {
     const navigate = useNavigate();
     const location = useLocation();
     const dispatch = useDispatchApp();
+    const [searchParams, setSearchParams] = useSearchParams();
     
     const onClickHandler = () => {
-        console.log();
-        navigate(`${id}`);
+        searchParams.set('breweryID', selectBrewery.id);
+        setSearchParams(searchParams);
     };
     
     const onfavoriteHandler = (e: any) => {

@@ -24,14 +24,12 @@ export const App = () => {
         <Routes>
           <Route path="browse-breweries/*" element={<BrowseBreweries />} />
           <Route path="favorite-breweries/*" element={<FavoriteBreweries />} />
-          <Route path="*/*">
-            <Route path=":breweryID" element={<BreweryProfile />} />
-          </Route>
           <Route
             path="*"
             element={<Navigate to="/browse-breweries" replace />}
           />
         </Routes>
+        <BreweryProfile />
       </Provider>
     </ThemeProvider>
   );

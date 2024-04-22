@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea } from '@mui/material';
+import { Box, Button, Card, CardActionArea, CardActions } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
@@ -20,14 +20,9 @@ export const AppCard: React.FC<Props> = ({
   onClick,
 }) => {
   return (
-    <Card onClick={onClick} key={data.id}>
+    <Card key={data.id}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={imageUrl}
-          alt="img"
-        />
+        <CardMedia component="img" height="140" image={imageUrl} alt="img" />
         <CardContent>
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Typography gutterBottom variant="h5" component="div">
@@ -45,6 +40,11 @@ export const AppCard: React.FC<Props> = ({
             {data.phone}
           </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small" onClick={onClick}>
+            Learn More
+          </Button>
+        </CardActions>
       </CardActionArea>
     </Card>
   );
