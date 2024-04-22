@@ -1,10 +1,8 @@
 import { Box, Grid } from '@mui/material';
-import { BreweryCard } from '../UI/Smart/BreweryCard';
-import { BreweriesPagination } from '../UI/Smart/Pagination';
-import { SearchBrewery } from '../UI/Smart/SearchBrewery';
-import { FavoritesSelectors } from '../state/Favorites/FavoritesSelectors';
-import { useSelectorApp } from '../state/hooks';
-import { BrewriesSelector } from '../state/Breweries/BreweriesSelectors';
+import { BreweryCard } from '../../UI/Smart/BreweryCard';
+import { BrewriesSelector } from '../../state/Breweries/BreweriesSelectors';
+import { FavoritesSelectors } from '../../state/Favorites/FavoritesSelectors';
+import { useSelectorApp } from '../../state/hooks';
 
 export const FavoriteBreweries: React.FC = () => {
   const selectIDs = useSelectorApp(FavoritesSelectors.selectAllFavoritesIDs);
@@ -21,11 +19,9 @@ export const FavoriteBreweries: React.FC = () => {
 
   return (
     <Box>
-      <SearchBrewery />
       <Grid container spacing={15} padding={15}>
         {mapChildren()}
       </Grid>
-      <BreweriesPagination />
     </Box>
   );
 };

@@ -2,12 +2,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Provider } from 'react-redux';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { BreweryProfile } from './Pages/BreweryProfile';
-import { BrowseBreweries } from './Pages/BrowseBreweries';
-import { FavoriteBreweries } from './Pages/FavoriteBreweries';
-import { AppNavbar } from './Pages/Navbar';
+import { BrowseBreweries } from './Pages/BrowseBreweries/BrowseBreweries';
+import { FavoriteBreweries } from './Pages/FavoriteBreweries/FavoriteBreweries';
+import { AppNavbar } from './UI/Dumb/Navbar';
 import reportWebVitals from './reportWebVitals';
 import { store } from './state/store';
+import { BreweryProfile } from './Pages/BreweryProfile/BreweryProfile';
 
 const darkTheme = createTheme({
   palette: {
@@ -22,11 +22,11 @@ export const App = () => {
         <CssBaseline />
         <AppNavbar />
         <Routes>
-          <Route
-            path="browse-breweries/*"
-            element={<BrowseBreweries />}
-          />
-          <Route path="favorite-breweries" element={<FavoriteBreweries />}/>
+          <Route path="browse-breweries/*" element={<BrowseBreweries />} />
+          <Route path="favorite-breweries/*" element={<FavoriteBreweries />} />
+          <Route path="*/*">
+            <Route path=":breweryID" element={<BreweryProfile />} />
+          </Route>
           <Route
             path="*"
             element={<Navigate to="/browse-breweries" replace />}

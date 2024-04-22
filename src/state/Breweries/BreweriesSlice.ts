@@ -1,14 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { getBreweries } from './thunks';
 
 export interface initialStateInterface {
   breweries: any;
+  size: number;
   loading: boolean | undefined;
   error: string | undefined;
 }
 
 export const initialState: initialStateInterface = {
   breweries: {},
+  size: 0,
   loading: undefined,
   error: undefined,
 };
@@ -16,7 +18,11 @@ export const initialState: initialStateInterface = {
 export const BreweriesSlice = createSlice({
   name: 'breweries',
   initialState,
-  reducers: {},
+  reducers: {
+    setSize: (state, action: PayloadAction<{ data: number }>) => {
+      state.size = action.payload.data;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getBreweries.pending, (state) => {

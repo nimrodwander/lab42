@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
+import { AppSearch } from '../../UI/Dumb/SearchBox';
 import { getBreweries } from '../../state/Breweries/thunks';
 import { useDispatchApp } from '../../state/hooks';
-import { AppSearch } from '../Dumb/SearchBox';
 
 export const SearchBrewery: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

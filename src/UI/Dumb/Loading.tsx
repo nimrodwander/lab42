@@ -1,4 +1,4 @@
-import { Box, CircularProgress } from "@mui/material";
+import { Box, CircularProgress } from '@mui/material';
 
 interface Props {
   isLoading: boolean | undefined;
@@ -6,11 +6,21 @@ interface Props {
   placeholder?: string | undefined;
 }
 
-export const Loading: React.FC<Props> = ({ isLoading, children, placeholder }) => {
+export const AppLoading: React.FC<Props> = ({
+  isLoading,
+  children,
+  placeholder,
+}) => {
   return (
     <>
       {isLoading === true && (
-        <Box sx={{display: "flex", alignItems: 'center', justifyContent: 'center'}}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <CircularProgress />
         </Box>
       )}

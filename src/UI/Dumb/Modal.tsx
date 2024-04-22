@@ -9,6 +9,7 @@ interface Props {
 }
 
 export const AppModal: React.FC<Props> = ({ children, onClose, title }) => {
+
   return (
     <Dialog open={true} onClose={onClose} fullWidth>
       <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between' }}>

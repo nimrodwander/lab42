@@ -26,7 +26,7 @@ export const AppCard: React.FC<Props> = ({
           component="img"
           height="140"
           image={imageUrl}
-          alt="green iguana"
+          alt="img"
         />
         <CardContent>
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>

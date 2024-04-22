@@ -31,4 +31,8 @@ export namespace BrewriesSelector {
   export const selectAllBreweriesIDs = (state: RootState) => {
     return Object.keys(state.BreweriesReducer.breweries);
   };
+  
+    export const selectSize = ((state: RootState) => {
+        return state.BreweriesReducer.size;
+    })
 }
