@@ -18,10 +18,10 @@ export const BreweryProfile: React.FC = () => {
   };
 
   return (
-    <AppLoading isLoading={loading}>
-      <SearchParamsDisplay params={SEARCH_PARAMS.BREWERY_ID}>
-        <BreweryModal onClose={onCloseHandler} />
-      </SearchParamsDisplay>
-    </AppLoading>
+    <SearchParamsDisplay params={SEARCH_PARAMS.BREWERY_ID}>
+      <AppLoading isLoading={loading}>
+          <BreweryModal onClose={onCloseHandler} />
+      </AppLoading>
+    </SearchParamsDisplay>
   );
 };
