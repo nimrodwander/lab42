@@ -30,7 +30,7 @@ export const BreweriesPagination = () => {
 
   return (
     <>
-      {selectSize > ITEMS_PER_PAGE && (
+      {selectSize >= ITEMS_PER_PAGE && (
         <Pagination
           count={10}
           page={page}
